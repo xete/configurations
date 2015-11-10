@@ -1,0 +1,8 @@
+let has_custom_func = "yes"
+
+
+func! Make()
+	exec "w"
+	exec "!make F=%"
+	exec "! ./%<"
+endfunc
