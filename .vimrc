@@ -31,5 +31,7 @@ map g4 <Esc><<^<Esc>/\/\*<CR>3x<Esc>$? \*\/<CR>3x<Esc>
 
 source ~/.vimfunc
 
-map gm :call Make()<CR>
+map ;m :call Make()<CR>
+map ;r :call RunIt()<CR>
+
 

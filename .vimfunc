@@ -4,5 +4,9 @@ let has_custom_func = "yes"
 func! Make()
 	exec "w"
 	exec "!make F=%"
+endfunc
+
+func! RunIt()
+	exec "w"
 	exec "! ./%<"
 endfunc
