@@ -15,7 +15,8 @@ set autoindent
 set autoread
 set mouse=a
 
-set foldmethod=marker
+set foldenable
+set foldmethod=manual
 
 set clipboard+=unnamed
 
@@ -24,10 +25,13 @@ set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
 
-map g1 <Esc>o{<Esc>o}<Esc>ko<tab>
-map g2 <Esc>A{<Esc>o}<Esc>ko<tab>
-map g3 <Esc>^i<tab>/* <Esc>A */<Esc>
-map g4 <Esc><<^<Esc>/\/\*<CR>3x<Esc>$? \*\/<CR>3x<Esc>
+map ;1 <Esc>o{<Esc>o}<Esc>ko<tab>
+map ;2 <Esc>A{<Esc>o}<Esc>ko<tab>
+map ;3 <Esc>^i<tab>/* <Esc>A */<Esc>
+map ;4 <Esc>$<<^<Esc>/\/\*<CR>3x<Esc>$? \*\/<CR>3x<Esc>
+map ;0 <Esc>gg=G<Esc>
+noremap ;f <Esc>zf%<Esc>
+noremap ;F <Esc>zo<Esc>
 
 source ~/.vimfunc
 

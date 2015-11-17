@@ -2,6 +2,6 @@ map J <25j>
 map K <25k>
 
 set gui=none
-noremap gb :set gui+=bookmarks
-noremap gn :set gui=none
+noremap ;b :set gui+=bookmarks<CR>
+noremap ;n :set gui=none<CR>
 
