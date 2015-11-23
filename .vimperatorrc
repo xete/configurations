@@ -1,7 +1,10 @@
 map J <25j>
 map K <25k>
 
-set gui=none
+:set gui=none
 noremap ;b :set gui+=bookmarks<CR>
 noremap ;n :set gui=none<CR>
+noremap ;a :set gui+=all<CR>
+noremap ;t :tabopen http://fanyi.baidu.com/?aldtype=16047#auto/zh/<CR>
+noremap ;g :tabopen http://www.google.com/<CR>
 

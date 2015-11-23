@@ -123,32 +123,57 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#personal tools
-PATH=~/person/:$PATH
+# personal tools
+PATH=~/personal/:$PATH
 
-#set java environment
+# set java environment
 export JAVA_HOME=/opt/java/jdk1.8.0_51
 export JRE_HOME=$JAVA_HOME/jre
 export CLASSPATH=./:$CLASSPATH:$JAVA_HOME/lib:$JRE_HOME/lib
 PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin:$JAVA_HOME/lib:$JAVA_HOME
 
-#set xtensa
-PATH=/opt/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
-
-#set sublime text
-PATH=/opt/Sublime_Text_2/:$PATH
-
-#set android environment
+# set android environment
 ANDROID_DIR=$HOME/merge/android
 ANDROID_HOME=$ANDROID_DIR/android-sdk-linux
 GRANDLE_HOME=$ANDROID_DIR/gradle
 export ANDROID_HOME
+export GRANDLE_HOME 
 PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$GRANDLE_HOME/bin
 
-export PATH
-#auto completion for avoscloud
-source ~/.MY_ENV/.leancloud_completion.sh
+# set xtensa
+PATH=/opt/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
 
-#set system proxy
-#export http_proxy='http://127.0.0.1:1080'
-#export https_proxy='http://127.0.0.1:1080'
+# set sublime text
+PATH=/opt/Sublime_Text_2/:$PATH
+
+# set libopencv
+PATH=/usr/local/include:/usr/local/lib/opencv:$PATH
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:/usr/local/include
+
+# set Qt Creator
+export QTDIR=/opt/Qt5.5.1
+PATH=$QTDIR/5.5/gcc_64/include:$QTDIR/5.5/gcc_64/bin:$QTDIR/Tools/QtCreator/bin:$PATH 
+LD_LIBRARY_PATH=$QTDIR/5.5/gcc_64/lib:$LD_LIBRARY_PATH
+
+# cuda
+PATH=$PATH:/usr/local/cuda-7.0/bin
+LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+PYTHONPATH=$PYTHONPATH:$HOME/Downloads/cuda/caffe/python
+PATH=/usr/local/cuda/bin:$CUDA_HOME/bin:/usr/local/cuda/bin:$PATH
+export PYTHONPATH
+
+# torch source
+. $HOME/Downloads/Torch/torch/install/bin/torch-activate
+
+# auto completion for avoscloud
+# source ~/.MY_ENV/.leancloud_completion.sh
+
+# set system proxy
+# export http_proxy='http://127.0.0.1:1080'
+# export https_proxy='http://127.0.0.1:1080'
+
+# export ONCE is okay,
+# otherwise repetition occurs.
+export PATH
+export LD_LIBRARY_PATH
+

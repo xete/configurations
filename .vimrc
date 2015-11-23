@@ -17,6 +17,7 @@ set mouse=a
 
 set foldenable
 set foldmethod=manual
+set foldcolumn=0
 
 set clipboard+=unnamed
 
@@ -37,5 +38,6 @@ source ~/.vimfunc
 
 map ;m :call Make()<CR>
 map ;r :call RunIt()<CR>
+map ;t :sh<CR>
 
 
