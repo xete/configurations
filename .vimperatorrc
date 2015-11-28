@@ -1,10 +1,15 @@
-map J <25j>
-map K <25k>
+"3.10.1 (created: 2015/08/25 00:41:59)
 
-:set gui=none
-noremap ;b :set gui+=bookmarks<CR>
-noremap ;n :set gui=none<CR>
-noremap ;a :set gui+=all<CR>
-noremap ;t :tabopen http://fanyi.baidu.com/?aldtype=16047#auto/zh/<CR>
-noremap ;g :tabopen http://www.google.com/<CR>
+map J <lt>25j>
+map K <lt>25k>
 
+set gui=none
+set gui=tabs
+
+noremap ;b :set<Space>gui+=bookmarks<Return>
+noremap ;n :set<Space>gui=none<Return>
+noremap ;a :set<Space>gui+=all<Return>
+noremap ;t :tabopen<Space>http://fanyi.baidu.com/?aldtype=16047#auto/zh/<Return>
+noremap ;v :set<Space>gui=tabs<Return>
+noremap ;g :tabopen<Space>http://www.google.com/<Return>
+source! /home/xete/.vimperatorrc.local

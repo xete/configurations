@@ -147,8 +147,16 @@ PATH=/opt/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
 PATH=/opt/Sublime_Text_2/:$PATH
 
 # set libopencv
-PATH=/usr/local/include:/usr/local/lib/opencv:$PATH
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:/usr/local/include
+# /* origin version opencv2 */
+# PATH=/usr/local/include:/usr/local/lib/opencv:$PATH
+# LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+# newly installed opencv3
+OPENCV_3_PATH=/opt/opencv-3.0.0/build/install
+PATH=$OPENCV_3_PATH/include:$OPENCV_3_PATH/lib:$PATH
+LD_LIBRARY_PATH=$OPENCV_3_PATH/lib:$LD_LIBRRARY_PATH
+PKG_CONFIG_PATH=$OPENCV_3_PATH/lib/pkgconfig	# feeding pkg-config
+
+
 
 # set Qt Creator
 export QTDIR=/opt/Qt5.5.1
@@ -165,6 +173,9 @@ export PYTHONPATH
 # torch source
 . $HOME/Downloads/Torch/torch/install/bin/torch-activate
 
+# golang
+export GOPATH=$HOME/gitcode/hybridgroup
+
 # auto completion for avoscloud
 # source ~/.MY_ENV/.leancloud_completion.sh
 
@@ -176,4 +187,5 @@ export PYTHONPATH
 # otherwise repetition occurs.
 export PATH
 export LD_LIBRARY_PATH
+export PKG_CONFIG_PATH
 

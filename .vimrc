@@ -29,7 +29,7 @@ set encoding=utf-8
 map ;1 <Esc>o{<Esc>o}<Esc>ko<tab>
 map ;2 <Esc>A{<Esc>o}<Esc>ko<tab>
 map ;3 <Esc>^i<tab>/* <Esc>A */<Esc>
-map ;4 <Esc>$<<^<Esc>/\/\*<CR>3x<Esc>$? \*\/<CR>3x<Esc>
+map ;4 <Esc><<^3x<Esc>/\*\/<Return>h3x<Esc>
 map ;0 <Esc>gg=G<Esc>
 noremap ;f <Esc>zf%<Esc>
 noremap ;F <Esc>zo<Esc>
