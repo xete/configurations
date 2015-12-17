@@ -2,11 +2,11 @@ let has_custom_func = "yes"
 
 
 func! Make()
-	exec "w"
-	exec "!make F=%"
+	exec "w /tmp/%"
+	exec "!make F=/tmp/%"
 endfunc
 
 func! RunIt()
 	exec "w"
-	exec "! ./%<"
+	exec "! /tmp/%<"
 endfunc
