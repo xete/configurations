@@ -2,7 +2,7 @@ let has_custom_func = "yes"
 
 
 func! Make()
-	exec "w /tmp/%"
+	exec "w! /tmp/%"
 	exec "!make F=/tmp/%"
 endfunc
 
