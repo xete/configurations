@@ -33,7 +33,7 @@ map ;3 <Esc>^i<tab>/* <Esc>A */<Esc>
 map ;4 <Esc><<^3x<Esc>/\*\/<Return>h3x<Esc>
 map ;0 <Esc>gg=G<Esc>
 noremap ;s <esc>:<esc> 
-noremap ;f <Esc>zf%<Esc>
+noremap ;f <Esc>$zf%<Esc>
 noremap ;e <Esc>zo<Esc>
 
 source ~/.vimfunc
